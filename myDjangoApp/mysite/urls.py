@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from . import views # '.' indicates that we are importing from the same directory
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('helloworld/', views.hello_world), # http://127.0.0.1:8000/helloworld/
 ]
